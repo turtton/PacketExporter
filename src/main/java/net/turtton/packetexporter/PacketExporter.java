@@ -1,7 +1,8 @@
 package net.turtton.packetexporter;
 
-import com.google.common.collect.*;
-import com.google.gson.Gson;
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
 import com.google.gson.GsonBuilder;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
@@ -9,12 +10,10 @@ import net.minecraft.network.NetworkSide;
 import net.minecraft.network.NetworkState;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import oshi.util.tuples.Pair;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Map;
 
 public class PacketExporter implements ModInitializer {
