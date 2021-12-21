@@ -29,7 +29,7 @@ public class PacketExporter implements ModInitializer {
                 state.packetHandlers.forEach(((side, packetHandler) -> {
                     Map<Integer, String> packetMap = Maps.newTreeMap();
                     packetHandler.packetIds.forEach((packet, id) -> packetMap.put(id, packet.getSimpleName()));
-                    dataMap.putAll(side, packetMap.entrySet().stream().map(entry -> String.format("0x%02X", entry.getKey()) + " " + entry.getValue()).toList());
+                    dataMap.putAll(side, packetMap.entrySet().stream().map(entry -> String.format("0x%02x", entry.getKey()) + " " + entry.getValue()).toList());
                 }
 
                 ));
